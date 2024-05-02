@@ -52,6 +52,7 @@ class OrangeCat extends Feline {
     super(name, age, nickname);
   }
   attack() {
+    this.energy += 5;
     console.log("💣 World Destroyed 🧨");
   }
 }
@@ -63,6 +64,7 @@ class MaineCoon extends Feline {
   }
 
   attack() {
+    this.energy -= 10;
     console.log("scratch 😴");
   }
 }
