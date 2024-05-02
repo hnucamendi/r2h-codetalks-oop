@@ -6,10 +6,16 @@ class Feline {
     this.nickname = nickname;
   }
 
+  attack() {
+    this.energy -= 5;
+    console.log("bam");
+  }
+
   meow() {
     console.log(`Meow my name is ${this.name}`);
     this.energy += 10;
   }
+
   purr() {
     console.log("purr");
     this.energy += 50;
@@ -45,7 +51,7 @@ class OrangeCat extends Feline {
   constructor(name, age, nickname) {
     super(name, age, nickname);
   }
-  orangeAttack() {
+  attack() {
     console.log("💣 World Destroyed 🧨");
   }
 }
@@ -56,7 +62,7 @@ class MaineCoon extends Feline {
     super(name, age, nickname);
   }
 
-  maineAttack() {
+  attack() {
     console.log("scratch 😴");
   }
 }
@@ -66,5 +72,5 @@ const toby = new MaineCoon("Toby", 3, "Toe-Bean");
 
 pedro.meow();
 toby.meow();
-pedro.orangeAttack();
-toby.maineAttack();
+pedro.attack();
+toby.attack();
